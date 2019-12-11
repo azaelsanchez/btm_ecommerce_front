@@ -5,7 +5,9 @@ class Slider extends Component{
     render(){
 
         return(
-            <h1></h1>
+            <h1>Slider</h1>
         )
     }
 }
+
+export default Slider;
