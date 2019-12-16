@@ -1,0 +1,15 @@
+.grid{
+    display: grid;
+    grid-template-rows: 15vh 1fr 15vh;
+}
+
+.todoContent{
+    min-height: 70vh;
+}
+
+.todoFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #81B7DD;
+}

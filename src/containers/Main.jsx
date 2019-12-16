@@ -2,12 +2,12 @@ import React, { Fragment } from 'react';
 import './App.css';
 
 //Componentes importados
-import Header from './components/Header';
-import Slider from './components/Slider';
-import Footer from './components/Footer';
-import Sidebar from './components/Sidebar';
+import Header from '../components/Header';
+import Slider from '../components/Slider';
+import Footer from '../components/Footer';
+import Sidebar from '../components/Sidebar';
 
-function App() {
+function Main() {
   return (
     <Fragment>
       <Header />
@@ -20,4 +20,4 @@ function App() {
   );
 }
 
-export default App;
+export default Main;
