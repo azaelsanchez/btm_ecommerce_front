@@ -1,48 +1,38 @@
-import React, { Component, Fragment } from 'react';
-import '../assets/css/login.css';
+import React from "react";
+import { MDBContainer, MDBRow, MDBCol, MDBBtn } from 'mdbreact';
 
+const FormPage = () => {
+  return (
+    <MDBContainer>
+      <MDBRow>
+        <MDBCol md="6">
+          <form>
+            <p className="h4 text-center mb-4">Sign in</p>
+            <label htmlFor="defaultFormLoginEmailEx" className="grey-text">
+              Your email
+            </label>
+            <input
+              type="email"
+              id="defaultFormLoginEmailEx"
+              className="form-control"
+            />
+            <br />
+            <label htmlFor="defaultFormLoginPasswordEx" className="grey-text">
+              Your password
+            </label>
+            <input
+              type="password"
+              id="defaultFormLoginPasswordEx"
+              className="form-control"
+            />
+            <div className="text-center mt-4">
+              <MDBBtn color="indigo" type="submit">Login</MDBBtn>
+            </div>
+          </form>
+        </MDBCol>
+      </MDBRow>
+    </MDBContainer>
+  );
+};
 
-
-class Login extends Component{
-    
-    render(){
-        return(
-        
-            <Fragment>
-             <div className="hero">
-                 <div className="form-box">
-                     <div className="button-box">
-                         <div id="btn"></div>
-                        <button id="loginMove" type="button" className="toggle-btn" onClick="login()">Log In</button>
-                        <button id="registerMove" type="button" className="toggle-btn" onClick="register()">Register</button>
-                     </div>
-                     <form id="login" className="input-group">
-                         <input type="text" className="input-field" placeholder="E-mail" required></input>
-                         <input type="text" className="input-field" placeholder="Password" required></input>
-                         <input type="checkbox" className="chech-box"></input><span>Remember Password</span>
-                         <Fragment></Fragment><button type="submit" className="submit-btn">Log in</button>
-                    </form>
-                    <form id="register" className="input-group">
-                         <input type="text" className="input-field" placeholder="E-mail" required></input>
-                         <input type="text" className="input-field" placeholder="Password" required></input>
-                         <input type="text" className="input-field" placeholder="First Name" required></input>
-                         <input type="text" className="input-field" placeholder="Last Name" required></input>
-                         <input type="text" className="input-field" placeholder="Address" required></input>
-                         <input type="text" className="input-field" placeholder="Postcode" required></input>
-                         <input type="text" className="input-field" placeholder="City" required></input>
-                         <input type="text" className="input-field" placeholder="Province" required></input>
-                         <input type="text" className="input-field" placeholder="Country" required></input>
-                         <input type="text" className="input-field" placeholder="Phone Number" required></input>
-                         <input type="checkbox" className="chech-box"></input><span>Remember Password</span>
-                         <Fragment></Fragment><button type="submit" className="submit-btn">Log in</button>
-                    </form>
-                 </div>
-             </div>
-            </Fragment>
-            
-        )
-    }
-    
-}
-
-export default Login;
+export default FormPage;

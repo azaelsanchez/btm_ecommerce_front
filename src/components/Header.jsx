@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Buscador from './Buscador';
+import { MDBBreadcrumb, MDBBreadcrumbItem, MDBContainer } from "mdbreact";
 
 
 class Header extends Component {
@@ -47,5 +48,6 @@ class Header extends Component {
     }
 
 }
+
 
 export default Header;
