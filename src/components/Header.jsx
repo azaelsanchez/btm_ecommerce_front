@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import Buscador from './Buscador';
 
 
 class Header extends Component {
@@ -20,21 +22,22 @@ class Header extends Component {
                     <nav id="menu">
                         <ul>
                             <li>
-                                <a href="#">Inicio</a>
+                                <Link to="/"> Inicio </Link>
                             </li>
                             <li>
-                                <a href="#">Productos</a>
+                            <Link to="/productos"> Productos </Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <a href="#">Info</a>
+                            </li> */}
+                            <li>
+                            <Link to="/login"> Mi perfil </Link>
                             </li>
                             <li>
-                                <a href="#">Mi Perfil</a>
-                            </li>
-                            <li>
-                                <a href="#">Cesta</a>
+                            <Link to="/carrito"> Cesta </Link>
                             </li>
                         </ul>
+                        <Buscador />
                     </nav>
 
                     <div className="clearfix"></div>
