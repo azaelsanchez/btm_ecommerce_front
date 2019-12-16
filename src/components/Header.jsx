@@ -20,16 +20,16 @@ class Header extends Component {
                     <nav id="menu">
                         <ul>
                             <li>
+                                <a href="#">Inicio</a>
+                            </li>
+                            <li>
                                 <a href="#">Productos</a>
                             </li>
                             <li>
-                                <a href="#">Pagina 1</a>
+                                <a href="#">Info</a>
                             </li>
                             <li>
-                                <a href="#">Pagina 2</a>
-                            </li>
-                            <li>
-                                <a href="#">Login/Registro</a>
+                                <a href="#">Mi Perfil</a>
                             </li>
                             <li>
                                 <a href="#">Cesta</a>
