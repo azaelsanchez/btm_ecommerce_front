@@ -1,12 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+
+//Componentes importados
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 class Perfil extends Component{
 
     render(){
         return(
-            <p>Hola soy un Perfil</p>
+            <Fragment>
+            <Header />
+              
+            <p>Hola soy Perfil</p>
+            <Footer />
+            </Fragment>
+            
         )
     }
 }
+
 
 export default Perfil;

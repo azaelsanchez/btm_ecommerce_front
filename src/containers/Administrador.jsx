@@ -1,10 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import MeterProducto from '../components/MeterProducto';
 
 class Administrador extends Component{
 
     render(){
         return(
-            <p>Hola soy un Administrador</p>
+            <Fragment>
+                <Header />
+                <MeterProducto/>
+                <Footer />
+            </Fragment> 
         )
     }
 }

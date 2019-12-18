@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
+
 import Main from './containers/Main';
-import Login from './components/Login';
+import PagLogin from './containers/PagLogin';
 import Detalle from './containers/Detalle';
 import Carrito from './containers/Carrito';
 import Administrador from './containers/Administrador';
@@ -16,7 +17,7 @@ function Router() {
         <BrowserRouter>
             <Switch>
                 <Route path="/" exact component={Main} />
-                <Route path="/login" exact component={Login} />
+                <Route path="/login" exact component={PagLogin} />
                 <Route path="/detalle" exact component={Detalle} />
                 <Route path="/carrito" exact component={Carrito} />
                 <Route path="/administrador" exact component={Administrador} />

@@ -12,9 +12,7 @@ class Wrapper extends Component {
         return(
             <Fragment>
                 <main className="grid">
-                    <Nav login={this.state.login} />
                     <section className="todoContent">
-                        {this.props.children}
                     </section>
                     <Footer />
                 </main>
