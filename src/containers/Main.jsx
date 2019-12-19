@@ -20,6 +20,7 @@ function Main() {
 
       {/* <Sidebar /> */}
       <div className="clearfix"></div>
+      <br/><br/><br/><br/><br/><br/><br/><br/>
       <Footer />
     </Fragment>
   );
