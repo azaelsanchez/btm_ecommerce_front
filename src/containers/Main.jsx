@@ -5,15 +5,18 @@ import './App.css';
 
 //Componentes importados
 import Header from '../components/Header';
-import Slider from '../components/Slider';
+import SliderPDestacados from '../components/SliderPDestacados';
 import Footer from '../components/Footer';
+import SliderPMasVendidos from '../components/SliderPMasVendidos';
 // import Sidebar from '../components/Sidebar';
 
 function Main() {
   return (
     <Fragment>
       <Header />
-      <Slider />
+      <SliderPDestacados />
+      <br/><br/>
+      <SliderPMasVendidos/>
 
       {/* <Sidebar /> */}
       <div className="clearfix"></div>

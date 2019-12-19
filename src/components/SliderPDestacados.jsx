@@ -18,7 +18,7 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "green" }}
+      style={{ ...style, display: "block", background: "gray" }}
       onClick={onClick}
     />
   );
@@ -38,7 +38,7 @@ export default class CustomArrows extends Component {
     };
     return (
       <div>
-        <h2> Slider </h2>
+        <h2> Productos destacados </h2>
         <Slider {...settings}>
           <div>
             <h3>1</h3>
