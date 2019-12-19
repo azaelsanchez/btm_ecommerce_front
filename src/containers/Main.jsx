@@ -7,7 +7,7 @@ import './App.css';
 import Header from '../components/Header';
 import Slider from '../components/Slider';
 import Footer from '../components/Footer';
-import Sidebar from '../components/Sidebar';
+// import Sidebar from '../components/Sidebar';
 
 function Main() {
   return (
@@ -15,7 +15,7 @@ function Main() {
       <Header />
       <Slider />
 
-      <Sidebar />
+      {/* <Sidebar /> */}
       <div className="clearfix"></div>
       <Footer />
     </Fragment>

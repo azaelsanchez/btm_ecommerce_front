@@ -1,50 +1,65 @@
-import React from "react";
-import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer } from
-"mdbreact";
+import React, { Component } from "react";
+import Slider from "react-slick";
 
-const Slider = () => {
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
   return (
-    <MDBContainer>
-      <MDBCarousel
-        activeItem={1}
-        length={3}
-        showControls={true}
-        showIndicators={true}
-        className="z-depth-1"
-        slide
-      >
-        <MDBCarouselInner>
-          <MDBCarouselItem itemId="1">
-            <MDBView>
-              <img
-                className="w-50"
-                src="https://seguros.elcorteingles.es/admin/assets/uploads/files/images/thumbnails_xl/5bf4b-dia-mundial-del-galgo.jpg"
-                alt="First slide"
-              />
-            </MDBView>
-          </MDBCarouselItem>
-          <MDBCarouselItem itemId="2">
-            <MDBView>
-              <img
-                className="w-50"
-                src="https://www.xlsemanal.com/wp-content/uploads/sites/3/2019/05/galgo-perro-caza-abandono-1-768x506.jpg"
-                alt="Second slide"
-              />
-            </MDBView>
-          </MDBCarouselItem>
-          <MDBCarouselItem itemId="3">
-            <MDBView>
-              <img
-                className=" w-50"
-                src="https://www.nolodejesalazar.es/www.nolodejesalazar.es/uploads/2019/05/no-lo-dejes-al-azar-border-collie.jpg"
-                alt="Third slide"
-              />
-            </MDBView>
-          </MDBCarouselItem>
-        </MDBCarouselInner>
-      </MDBCarousel>
-    </MDBContainer>
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "gray" }}
+      onClick={onClick}
+    />
   );
 }
 
-export default Slider;
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "green" }}
+      onClick={onClick}
+    />
+  );
+}
+
+export default class CustomArrows extends Component {
+  render() {
+    const settings = {
+      dots: true,
+      infinite: true,
+      centerPadding: "60px",
+      centerMode: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />
+    };
+    return (
+      <div>
+        <h2> Slider </h2>
+        <Slider {...settings}>
+          <div>
+            <h3>1</h3>
+          </div>
+          <div>
+            <h3>2</h3>
+          </div>
+          <div>
+            <h3>3</h3>
+          </div>
+          <div>
+            <h3>4</h3>
+          </div>
+          <div>
+            <h3>5</h3>
+          </div>
+          <div>
+            <h3>6</h3>
+          </div>
+        </Slider>
+      </div>
+    );
+  }
+}
