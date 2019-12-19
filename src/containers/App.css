@@ -16,6 +16,7 @@ body {
   background: white;
   border-bottom: 1px solid #ccc;
   border-top: 5px solid #61dafb;
+  position: relative;
 }
 
 .center{
@@ -29,29 +30,29 @@ body {
 }
 
 #logo {
-  width: 30%;
   font-size: 30px;
   float: left;
-  margin-top: 35px;
+  position: absolute;
+  top: 0;
 }
 
 #logo img {
-  display: block;
+  padding-left: 20%;
+  border: 1px solid #61dafb;
   float: left;
-  height: 60px;
-  margin-top: -9px;
+  height: 110px;
   margin-right: -10px;
   animation: girar infinite 30s linear;
 }
 
-@keyframes girar {
+/* @keyframes girar {
   from {
       transform: rotate(0deg);
   }
   to {
       transform: rotate(360deg);
   }
-}
+} */
 
 #brand {
   display: block;
@@ -66,7 +67,7 @@ body {
 }
 
 #menu ul{
-  line-height: 85px;
+  padding-top: 5%;
   width: 60%;
   float:right;
 }
@@ -430,3 +431,6 @@ textarea{
      padding-top: 35px;
   }
 }
+
+.slick-prev { left: 3% !important; z-index: 1; } .slick-next { right: 3% !important; z-index: 1; }
+
