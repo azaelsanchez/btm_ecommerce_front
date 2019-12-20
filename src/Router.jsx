@@ -17,12 +17,12 @@ function Router() {
         <BrowserRouter>
             <Switch>
                 <Route path="/" exact component={Main} />
-                <Route path="/login" exact component={PagLogin} />
-                <Route path="/detalle" exact component={Detalle} />
-                <Route path="/carrito" exact component={Carrito} />
-                <Route path="/administrador" exact component={Administrador} />
-                <Route path="/perfil" exact component={Perfil} />
-                <Route path="/productos" exact component={Productos} />
+                <Route path="/login" component={Login} />
+                <Route path="/detalle" component={Detalle} />
+                <Route path="/carrito" component={Carrito} />
+                <Route path="/administrador" component={Administrador} />
+                <Route path="/perfil" component={Perfil} />
+                <Route path="/productos" component={Productos} />
             </Switch>
         </BrowserRouter>
     )
