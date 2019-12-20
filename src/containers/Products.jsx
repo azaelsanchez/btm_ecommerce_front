@@ -6,7 +6,6 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import FilterPrice from '../components/FilterPrice';
 import ProductItem from '../components/ProductItem';
-import AddToCart from '../components/AddToCart';
 
 class Products extends Component{
 
@@ -19,16 +18,12 @@ class Products extends Component{
                 <nav>
                     <FilterPrice/>
                     <ProductItem/>
-                    <AddToCart/>
                     
                     
-                    <Link to={'/detailProduct'}> DetalleProducto</Link>
+                    <Link to={'/ProductDetail'}> DetalleProducto</Link>
                 </nav>
             </div>
-            
-                
-            
-            
+        
             <Footer />
             </Fragment>
             

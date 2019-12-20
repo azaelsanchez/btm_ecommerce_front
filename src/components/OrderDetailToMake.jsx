@@ -5,9 +5,9 @@ class OrderDetailToMake extends Component{
     render(){
         return(
             <Fragment>
-                <p>name</p>
+                <h1>name</h1>
                 <p>cantidad</p>
-                <h1>price</h1>
+                <p>price</p>
                 <p>transporte</p>
                 <p>tax</p>
                 <p>shipping-cost</p>

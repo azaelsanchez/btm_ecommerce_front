@@ -5,8 +5,8 @@ class OrderDetailDone extends Component{
     render(){
         return(
             <Fragment>
-                <p>Id order</p>
                 <p>name</p>
+                <p>Id order</p>
                 <p>cantidad</p>
                 <h1>price</h1>
                 <p>tax</p>

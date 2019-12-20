@@ -29,7 +29,7 @@ class Header extends Component {
                             </li>
 
                             <li>
-                                <Link to="/Product"> Productos </Link>
+                                <Link to="/Products"> Productos </Link>
                             </li>
 
                             {/* <li>
