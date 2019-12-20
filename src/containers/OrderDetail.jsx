@@ -2,20 +2,18 @@ import React, { Component, Fragment } from 'react';
 
 //Componentes importados
 import Header from '../components/Header';
-
 import Footer from '../components/Footer';
+import OrderDetailDone from '../components/OrderDetailDone';
+import Direction from '../components/Direction';
 
-class Carrito extends Component{
+class orderDetail extends Component{
 
     render(){
         return(
             <Fragment>
             <Header />
-            
-
-            
-                
-            <p>Hola soy un carrito</p>
+            <OrderDetailDone/>
+            <Direction/>
             <Footer />
             </Fragment>
             
@@ -23,4 +21,4 @@ class Carrito extends Component{
     }
 }
 
-export default Carrito;
+export default orderDetail;

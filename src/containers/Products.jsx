@@ -4,8 +4,11 @@ import { Link } from 'react-router-dom';
 //Componentes importados
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import FilterPrice from '../components/FilterPrice';
+import ProductItem from '../components/ProductItem';
+import AddToCart from '../components/AddToCart';
 
-class Productos extends Component{
+class Products extends Component{
 
     render(){
         return(
@@ -14,8 +17,12 @@ class Productos extends Component{
             
             <div>
                 <nav>
-                    <p>Hola soy un producto</p>
-                    <Link to={'/detalle'}> DetalleProducto</Link>
+                    <FilterPrice/>
+                    <ProductItem/>
+                    <AddToCart/>
+                    
+                    
+                    <Link to={'/detailProduct'}> DetalleProducto</Link>
                 </nav>
             </div>
             
@@ -29,4 +36,4 @@ class Productos extends Component{
     }
 }
 
-export default Productos;
+export default Products;

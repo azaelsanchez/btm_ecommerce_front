@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
+
 //Componentes importados
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -7,7 +8,7 @@ import Register from '../components/Register';
 import Login from '../components/Login'; 
 
 
-class PagLogin extends Component{
+class LoginPage extends Component{
 
    
     render(){
@@ -18,7 +19,7 @@ class PagLogin extends Component{
                 <Register/>
                 Login
                 <Login/>
-                <Link to={'/administrador'}> Pagina Administracion</Link>
+                
                 <Footer />
             </Fragment>
             
@@ -27,4 +28,4 @@ class PagLogin extends Component{
 }
 
 
-export default PagLogin;
+export default LoginPage;

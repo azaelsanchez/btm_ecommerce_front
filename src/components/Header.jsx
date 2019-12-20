@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 import Buscador from './Buscador';
 import logo from '../assets/images/logo.png'
 
+//import { MDBBreadcrumb, MDBBreadcrumbItem, MDBContainer } from "mdbreact";
 
+import Logo from './Logo';
+import Search from './Search';
 class Header extends Component {
 
     render() {
@@ -23,30 +26,28 @@ class Header extends Component {
 
                     <nav id="menu">
                         <ul>
+                            <Search/>
                             <li>
-                                <Buscador />
+                                <Link to="/Home"> Home </Link>
                             </li>
                             <li>
-                                <Link to="/"> Inicio </Link>
-                            </li>
-                            <li>
-                                <Link to="/productos"> Productos </Link>
+                                <Link to="/Product"> Productos </Link>
                             </li>
                             {/* <li>
                                 <a href="#">Info</a>
                             </li> */}
                             <li>
-                                <Link to="/login"> Mi perfil </Link>
+                                <Link to="/Login"> Mi perfil </Link>
                             </li>
                             <li>
-                                <Link to="/carrito"> Cesta </Link>
+                                <Link to="/PurchasingProcess"> Cesta </Link>
                             </li>
                         </ul>
-
+                        
                     </nav>
 
                     <div className="clearfix"></div>
-                </div>
+                
             </header>
         )
     }

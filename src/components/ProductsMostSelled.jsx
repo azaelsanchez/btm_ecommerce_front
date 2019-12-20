@@ -63,3 +63,5 @@ export default class CustomArrows extends Component {
     );
   }
 }
+
+export default ProductsMostSelled

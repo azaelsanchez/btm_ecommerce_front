@@ -2,13 +2,14 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 
-import Main from './containers/Main';
-import PagLogin from './containers/PagLogin';
-import Detalle from './containers/Detalle';
-import Carrito from './containers/Carrito';
-import Administrador from './containers/Administrador';
-import Perfil from './containers/Perfil';
-import Productos from './containers/Productos';
+import Home from './containers/Home';
+import LoginPage from './containers/LoginPage';
+import Products from './containers/Products';
+import ProductDetail from './containers/ProductDetail';
+import OrderDetail from './containers/OrderDetail';
+import PurchasingProcess from './containers/PurchasingProcess';
+import Profile from './containers/Profile';
+
 
 
 
@@ -16,15 +17,16 @@ function Router() {
     return (
         <BrowserRouter>
             <Switch>
-                <Route path="/" exact component={Main} />
-                <Route path="/login" component={Login} />
-                <Route path="/detalle" component={Detalle} />
-                <Route path="/carrito" component={Carrito} />
-                <Route path="/administrador" component={Administrador} />
-                <Route path="/perfil" component={Perfil} />
-                <Route path="/productos" component={Productos} />
+                <Route path="/" exact component={Home} />
+                <Route path="/login" exact component={LoginPage} />
+                <Route path="/products" exact component={Products} />
+                <Route path="/productDetail" exact component={ProductDetail} />
+                <Route path="/orderDetail" exact component={OrderDetail} />
+                <Route path="/purchasingProcess" exact component={PurchasingProcess} />
+                <Route path="/profile" exact component={Profile} />  
             </Switch>
         </BrowserRouter>
     )
 }
+
 export default Router;
