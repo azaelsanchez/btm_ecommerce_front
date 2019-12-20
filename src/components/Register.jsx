@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios'
+import Axios from 'axios';
 
 
 class Register extends Component {
@@ -17,6 +17,7 @@ class Register extends Component {
           password: '',
           email: '',
           address1: '',
+          adress2: '',
           postalCode: '',
           city: '',
           RegionId: '',
@@ -52,13 +53,13 @@ class Register extends Component {
         phone: this.state.phone,
       }
 
-      axios.post('http://localhost:3000/user/register', body)
-          .then( data => (data.id) )
-          .catch( err => (err.mns))
+      //axios.post('http://localhost:3000/user/register', body)
+      //    .then( data =h> (data.id) )
+      //    .catch( err => (err.mns))
 
-      //Axios.get(`http://localhost:3000/user/${this.state.provincia}`).then(num => this.setState({provincia_id: num.data.id}))
-      //.then( Axios.post('http://localhost:3000/user/register', body).then(item => console.log('usuario registrado'))
-      //.catch(err => console.error(err)))
+      Axios.get(`http://localhost:3000/user/region/${this.state.Region}`).then(num => this.setState({RegionId: num.data.id}))
+      .then( Axios.post('http://localhost:3000/user/register', body).then(item => console.log('usuario registrado'))
+      .catch(err => console.error(err)))
   }
 
 
@@ -110,7 +111,7 @@ class Register extends Component {
                 <label> Dirección 1 </label>
                   <input
                     type="text"
-                    name="address"
+                    name="address1"
                     value={this.state.address1}
                     onChange={(ev) => this.handleChange(ev)}
                   />
@@ -118,7 +119,7 @@ class Register extends Component {
                 <label> Dirección 2 </label>
                   <input
                     type="text"
-                    name="address"
+                    name="address2"
                     value={this.state.address2}
                     onChange={(ev) => this.handleChange(ev)}
                   />

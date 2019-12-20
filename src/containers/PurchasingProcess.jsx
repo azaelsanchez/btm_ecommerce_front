@@ -3,16 +3,16 @@ import React, { Component, Fragment } from 'react';
 //Componentes importados
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Cart from '../components/Cart';
 
 
-class Detalle extends Component{
+class PurchasingProcess extends Component{
 
     render(){
         return(
             <Fragment>
             <Header />
-        
-            <p>Hola soy un Detalle</p>
+            <Cart/>
             <Footer />
             </Fragment>
             
@@ -20,4 +20,4 @@ class Detalle extends Component{
     }
 }
 
-export default Detalle;
+export default PurchasingProcess;

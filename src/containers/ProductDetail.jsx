@@ -3,15 +3,18 @@ import React, { Component, Fragment } from 'react';
 //Componentes importados
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import ProductItemDetail from '../components/ProductItemDetail';
+import ProductsRelated from '../components/ProductsRelated';
 
-class Perfil extends Component{
+
+class DetailProduct extends Component{
 
     render(){
         return(
             <Fragment>
             <Header />
-              
-            <p>Hola soy Perfil</p>
+            <ProductItemDetail/>
+            <ProductsRelated/>
             <Footer />
             </Fragment>
             
@@ -19,5 +22,4 @@ class Perfil extends Component{
     }
 }
 
-
-export default Perfil;
+export default DetailProduct;

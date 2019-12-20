@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Buscador from './Buscador';
-import { MDBBreadcrumb, MDBBreadcrumbItem, MDBContainer } from "mdbreact";
 
+//import { MDBBreadcrumb, MDBBreadcrumbItem, MDBContainer } from "mdbreact";
 
+import Logo from './Logo';
+import Search from './Search';
 class Header extends Component {
 
     render(){
@@ -12,37 +13,32 @@ class Header extends Component {
             <header id="header">
                 <div className="center">
 
-                    <div id="logo">
-                    <a href="index.html">
-                        {/* <img src={logo} className="app-logo" alt="Logotipo" />
-                        <span id="brand"> */}
-                            {/* <strong>Curso</strong>React
-                    </span> */}
-                    </a>
+                    <Logo/>
                     </div>
                     <nav id="menu">
                         <ul>
+                            <Search/>
                             <li>
-                                <Link to="/"> Inicio </Link>
+                                <Link to="/Home"> Home </Link>
                             </li>
                             <li>
-                            <Link to="/productos"> Productos </Link>
+                                <Link to="/Product"> Productos </Link>
                             </li>
                             {/* <li>
                                 <a href="#">Info</a>
                             </li> */}
                             <li>
-                            <Link to="/login"> Mi perfil </Link>
+                                <Link to="/Login"> Mi perfil </Link>
                             </li>
                             <li>
-                            <Link to="/carrito"> Cesta </Link>
+                                <Link to="/PurchasingProcess"> Cesta </Link>
                             </li>
                         </ul>
-                        <Buscador />
+                        
                     </nav>
 
                     <div className="clearfix"></div>
-                </div>
+                
             </header>
         )
     }
