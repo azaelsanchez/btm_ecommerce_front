@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Buscador from './Buscador';
-import logo from '../assets/images/logo.png'
 
 //import { MDBBreadcrumb, MDBBreadcrumbItem, MDBContainer } from "mdbreact";
 
@@ -12,33 +10,36 @@ class Header extends Component {
     render() {
 
         return (
+            
+
+            
             <header id="header">
                 <div className="center">
 
-                    <div id="logo">
-                        <a href='/'>
-                            <img src={logo} className="app-logo" alt="Logotipo" />
-                        <span id="brand">
-                           
-                    </span>
-                        </a>
-                    </div>
+                    <Logo/>
 
                     <nav id="menu">
                         <ul>
-                            <Search/>
+                            <li>
+                                <Search/>
+                            </li>
+    
                             <li>
                                 <Link to="/Home"> Home </Link>
                             </li>
+
                             <li>
                                 <Link to="/Product"> Productos </Link>
                             </li>
+
                             {/* <li>
                                 <a href="#">Info</a>
                             </li> */}
+
                             <li>
                                 <Link to="/Login"> Mi perfil </Link>
                             </li>
+                            
                             <li>
                                 <Link to="/PurchasingProcess"> Cesta </Link>
                             </li>
@@ -47,8 +48,9 @@ class Header extends Component {
                     </nav>
 
                     <div className="clearfix"></div>
-                
+            </div>    
             </header>
+            
         )
     }
 

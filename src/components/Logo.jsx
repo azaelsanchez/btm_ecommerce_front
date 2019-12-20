@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 
+import logo from '../assets/images/logo.png'
 
 class Logo extends Component{
 
     render(){
         return(
-            <p>Soy un logo</p>
+            <div id="logo">
+                        <a href='/'>
+                            <img src={logo} className="app-logo" alt="Logotipo" />
+                        <span id="brand">
+                           
+                    </span>
+                        </a>
+                    </div>
             
             
             

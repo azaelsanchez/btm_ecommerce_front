@@ -5,18 +5,18 @@ import './App.css';
 
 //Componentes importados
 import Header from '../components/Header';
-import SliderPDestacados from '../components/SliderPDestacados';
+import ProductsPromoted from '../components/ProductsPromoted';
 import Footer from '../components/Footer';
-import SliderPMasVendidos from '../components/SliderPMasVendidos';
+import ProductsMostSelled from '../components/ProductsMostSelled';
 // import Sidebar from '../components/Sidebar';
 
 function Main() {
   return (
     <Fragment>
       <Header />
-      <SliderPDestacados />
+      <ProductsPromoted />
       <br/><br/>
-      <SliderPMasVendidos/>
+      <ProductsMostSelled/>
 
       {/* <Sidebar /> */}
       <div className="clearfix"></div>
