@@ -3,7 +3,8 @@ import React, { Component, Fragment } from 'react';
 //Componentes importados
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Cart from '../components/Cart';
+import OrderDetailToMake from '../components/OrderDetailToMake';
+import Button from '../components/Button';
 
 
 class PurchasingProcess extends Component{
@@ -11,9 +12,12 @@ class PurchasingProcess extends Component{
     render(){
         return(
             <Fragment>
-            <Header />
-            <Cart/>
-            <Footer />
+                <Header />
+                <OrderDetailToMake/>
+                <p>Comprar</p>
+                <Button/>
+
+                <Footer />
             </Fragment>
             
         )

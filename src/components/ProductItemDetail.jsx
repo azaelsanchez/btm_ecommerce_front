@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 
-import AddToCart from '../components/AddToCart'
+import AddToCart from './AddToCart'
+
+
 class ProductItemDetail extends Component{
 
     render(){

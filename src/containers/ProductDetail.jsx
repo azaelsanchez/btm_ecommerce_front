@@ -12,10 +12,10 @@ class DetailProduct extends Component{
     render(){
         return(
             <Fragment>
-            <Header />
-            <ProductItemDetail/>
-            <ProductsRelated/>
-            <Footer />
+                <Header />
+                <ProductItemDetail/>
+                <ProductsRelated/>
+                <Footer />
             </Fragment>
             
         )

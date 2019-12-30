@@ -1,15 +1,15 @@
 import React, { Component, Fragment } from 'react';
 
-import AddToCart from '../components/AddToCart';
+import AddToCart from './AddToCart';
 
-class ProductItem extends Component{
+axios.post('http://localhost:3000/products/product', body)
+    .then( data =h> (data.id) )
+    .catch( err => (err.mns))
 
     render(){
         return(
             <Fragment>
-                <h1>Name</h1>
-                <p>Img</p>
-                <p>Price</p>
+                
 
                 <AddToCart/>
     

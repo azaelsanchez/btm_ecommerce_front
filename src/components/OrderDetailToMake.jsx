@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react';
 
+import Button from './Button';
+
 class OrderDetailToMake extends Component{
 
     render(){
@@ -13,7 +15,8 @@ class OrderDetailToMake extends Component{
                 <p>shipping-cost</p>
                 <p>total</p>
     
-
+                <p>Borrar</p>
+                <Button/>
                 
     
             </Fragment>

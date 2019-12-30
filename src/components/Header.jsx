@@ -10,14 +10,9 @@ class Header extends Component {
     render() {
 
         return (
-            
-
-            
             <header id="header">
                 <div className="center">
-
                     <Logo/>
-
                     <nav id="menu">
                         <ul>
                             <li>

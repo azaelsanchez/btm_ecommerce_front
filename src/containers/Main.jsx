@@ -14,13 +14,13 @@ function Main() {
   return (
     <Fragment>
       <Header />
-      <ProductsPromoted />
-      <br/><br/>
-      <ProductsMostSelled/>
+        <ProductsPromoted />
+        <br/><br/>
+        <ProductsMostSelled/>
 
-      {/* <Sidebar /> */}
-      <div className="clearfix"></div>
-      <br/><br/><br/><br/><br/><br/><br/><br/>
+        {/* <Sidebar /> */}
+        <div className="clearfix"></div>
+        <br/><br/><br/><br/><br/><br/><br/><br/>
       <Footer />
     </Fragment>
   );

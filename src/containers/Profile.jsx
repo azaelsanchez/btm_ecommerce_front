@@ -3,30 +3,17 @@ import React, { Component, Fragment } from 'react';
 //Componentes importados
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import UserProfileData from '../components/UserProfileData';
-import UserProfileOrders from '../components/UserProfileOrders';
+import UserProfile from '../components/UserProfile';
+import AdminProfile from '../components/AdminProfile';
 
-class Perfil extends Component{
+class Profile extends Component{
 
     render(){
         return(
             <Fragment>
             <Header />
-            <div>
-                <p>Perfil Usuario</p>
-                <p>Datos Usuario</p>
-                <UserProfileData/>
-                <p>Datos pedidos</p>
-                <UserProfileOrders/> 
-            </div>
-            
-            <div>
-                <p>Perfil Administrador</p>
-                <p>Datos Administrador</p>
-                
-            </div>
-            
-
+                <UserProfile/>
+                <AdminProfile/>
             <Footer />
             </Fragment>
             
@@ -35,4 +22,4 @@ class Perfil extends Component{
 }
 
 
-export default Perfil;
+export default Profile;
