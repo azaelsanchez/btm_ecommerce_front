@@ -8,8 +8,10 @@ class OrderDone extends Component{
     render(){
         return(
             <Fragment>
-               <OrderDetailDone/>
-               <Direction/>
+                <h3>Productos Comprados</h3>
+                <OrderDetailDone/>
+                <h3>Dirección Pedido</h3>
+                <Direction/>
             </Fragment>     
         )
     }

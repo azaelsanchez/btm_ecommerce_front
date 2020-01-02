@@ -1,33 +1,43 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
+import axios from 'axios';
 
 import AddToCart from './AddToCart'
 
+class ProductItemDetail extends Component {
+  state = {
+    Products: []
+  }
 
-class ProductItemDetail extends Component{
+  componentDidMount() {
+    axios.get(`http://localhost:3000/products/product`)
+      .then(res => {
+        const Products = res.data;
+        this.setState({ Products });
+      })
+  }
 
-    render(){
-        return(
-            <Fragment>
-                <p>Img</p>
-                <p>Resto Img</p>
-                <h1>Name</h1>
-                <p>shortDesc</p>
-                <p>Price</p>
-                <p>Stock</p>
-                <p>Size</p>
-                <p>LongDesc</p>
-                <p>Dimension</p>
-
-                <AddToCart/>
-    
-            </Fragment>
-            
-            
-            
-            
-            
+  render() {
+    return (
+        <div>
+        { this.state.Products.map(product => 
+            <ul>
+                <li>{ product.name }</li>
+                <li>{ product.img1 }</li>
+                <li>{ product.thumbImg1 }</li>
+                <li>{ product.name }</li>
+                <li>{ product.shortDesc }</li>
+                <li>{ product.price }</li>
+                <li>{ product.stock }</li>
+                <li>{ product.size }</li>
+                <li>{ product.longDesc }</li>
+                <li>{ product.dimension }</li>
+            </ul>
         )
-    }
+        }
+            <AddToCart/>
+        </div>
+    )
+  }
 }
 
 export default ProductItemDetail;
