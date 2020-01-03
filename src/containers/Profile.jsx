@@ -1,10 +1,9 @@
 import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 
 //Componentes importados
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import UserProfile from '../components/UserProfile';
-import AdminProfile from '../components/AdminProfile';
 
 class Profile extends Component{
 
@@ -12,8 +11,9 @@ class Profile extends Component{
         return(
             <Fragment>
             <Header />
-                <UserProfile/>
-                <AdminProfile/>
+            <Link to="../UserProfile"> Usuario </Link>
+            <br/>
+            <Link to="../AdminProfile"> Administrador </Link>
             <Footer />
             </Fragment>
             

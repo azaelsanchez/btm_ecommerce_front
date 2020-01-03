@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 
 //Componentes importados
 import UserProfileData from '../components/UserProfileData';
-import UserProfileOrders from '../components/UserProfileOrders';
+//import UserProfileOrders from '../components/UserProfileOrders';
 
 class UserProfile extends Component{
 
@@ -10,11 +10,11 @@ class UserProfile extends Component{
         return(
             <Fragment>
             <div>
-                <p>Perfil Usuario</p>
-                <p>Datos Usuario</p>
+                <h1>Perfil Usuario</h1>
+                <h3>Datos Usuario</h3>
                 <UserProfileData/>
-                <p>Datos pedidos</p>
-                <UserProfileOrders/> 
+                <h3>Datos pedidos</h3>
+                {/*<UserProfileOrders/>*/} 
             </div>
             </Fragment>
             

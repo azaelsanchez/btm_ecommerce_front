@@ -20,8 +20,8 @@ class ProductItem extends Component {
         { this.state.Products.map(product => 
         <ul>
             <li>{product.name}</li>
-            <li>{product.img1}</li>
-            <li>{product.price}</li>
+            <img src={product.img1}alt="Imagen producto"/>
+            <li>{product.price} €</li>
         </ul>
         
             )}

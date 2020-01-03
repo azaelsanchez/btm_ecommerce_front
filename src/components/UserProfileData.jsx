@@ -24,13 +24,15 @@ class UserProfileData extends Component {
             <li>{user.name}</li>
             <li>{user.surname1}</li>
             <li>{user.surname2}</li>
-            <li>{user.shippinaddress1}</li>
-            <li>{user.shippinaddress2}</li>
+            <li>{user.shipAddress1}</li>
+            <li>{user.shipAddress2}</li>
             <li>{user.city}</li>
-            <li>{user.postalcode}</li>
+            <li>{user.postalCode}</li>
+            <li>{user.regionId}</li>
             <li>{user.phone}</li>
             <li>{user.email}</li>
             <li>{user.password}</li>
+            <li>{user.id}</li>
             <li>{user.token}</li>
             <li>{user.createdAt}</li>
             <li>{user.updatedAt}</li>

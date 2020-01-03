@@ -74,7 +74,7 @@ class Login extends Component {
                     <button onClick={(ev) => this.handleReset(ev)}> Reset </button>
                     <input type="submit" value="Login" />
                 </form>
-                </div>
+        </div>
         )
     }
 }

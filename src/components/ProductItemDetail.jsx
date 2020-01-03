@@ -21,16 +21,15 @@ class ProductItemDetail extends Component {
         <div>
         { this.state.Products.map(product => 
             <ul>
-                <li>{ product.name }</li>
-                <li>{ product.img1 }</li>
+                <h4>{ product.name }</h4>
+                <img src={product.img1 } alt="Imagen producto"/>
                 <li>{ product.thumbImg1 }</li>
-                <li>{ product.name }</li>
                 <li>{ product.shortDesc }</li>
-                <li>{ product.price }</li>
-                <li>{ product.stock }</li>
-                <li>{ product.size }</li>
+                <li>Precio: { product.price } €</li>
+                <li>Stock: { product.stock }</li>
+                <li>Talla: { product.size }</li>
                 <li>{ product.longDesc }</li>
-                <li>{ product.dimension }</li>
+                <li>Dimensiones: { product.dimensions }</li>
             </ul>
         )
         }
