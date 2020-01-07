@@ -2,8 +2,8 @@ import React, { Component, Fragment } from 'react';
 
 //Componentes importados
 import AdminProfileData from '../components/AdminProfileData';
-import AdminProfileOrders from '../components/AdminProfileOrders';
-import Statistics from '../components/Statistics';
+//import AdminProfileOrders from '../components/AdminProfileOrders';
+//import Statistics from '../components/Statistics';
 
 class AdminProfile extends Component{
 
@@ -11,8 +11,8 @@ class AdminProfile extends Component{
         return(
             <Fragment>
                 <AdminProfileData/>
-                <AdminProfileOrders/>
-                <Statistics/> 
+                {/*<AdminProfileOrders/>*/}
+                {/*<Statistics/>*/} 
             </Fragment>
             
         )

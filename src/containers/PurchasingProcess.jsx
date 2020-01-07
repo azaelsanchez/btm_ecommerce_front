@@ -18,6 +18,7 @@ class PurchasingProcess extends Component{
                 <OrderDetailToMake/>
                 <h3>Dirección del pedido</h3>
                 {/*<DirectionForm/>*/}
+                <p>TOTAL:</p>
                 <p>Comprar</p>
                 <Button/>
                 <Link to={'/OrderDetail'}> Detalle Pedido</Link>

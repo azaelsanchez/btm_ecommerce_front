@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import AddToCart from './AddToCart'
+
 class ProductItem extends Component {
   state = {
     Products: []
@@ -25,6 +27,7 @@ class ProductItem extends Component {
         </ul>
         
             )}
+            <AddToCart/>
         </div> 
     )
   }

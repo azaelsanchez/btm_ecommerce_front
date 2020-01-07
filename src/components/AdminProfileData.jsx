@@ -1,17 +1,17 @@
 import React, { Component, Fragment } from 'react';
 
-import Register from './Register';
-import Button from './Button';
-import UserProfileData from './UserProfileData';
+//import Register from './Register';
+//import Button from './Button';
+//import UserProfileData from './UserProfileData';
 
 class AdminProfileData extends Component{
     render(){
         return(
             <Fragment>
                 <h3>Listado Users</h3>
-                <UserProfileData/>
+                {/*<UserProfileData/>*/}
                 <h3>Añadir Usuario</h3>
-                <Register/>
+                {/*<Register/>*/}
                 <p>Borrar/Invalidar usuario</p>
                 <Button/>
                 
