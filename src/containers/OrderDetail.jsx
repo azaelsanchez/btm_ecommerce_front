@@ -3,18 +3,16 @@ import React, { Component, Fragment } from 'react';
 //Componentes importados
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import OrderDetailDone from '../components/OrderDetailDone';
-import Direction from '../components/Direction';
+import OrderDone from '../components/OrderDone';
 
 class orderDetail extends Component{
 
     render(){
         return(
             <Fragment>
-            <Header />
-            <OrderDetailDone/>
-            <Direction/>
-            <Footer />
+                <Header />
+                <OrderDone/>
+                <Footer />
             </Fragment>
             
         )

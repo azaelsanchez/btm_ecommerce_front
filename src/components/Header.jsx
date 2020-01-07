@@ -10,14 +10,9 @@ class Header extends Component {
     render() {
 
         return (
-            
-
-            
             <header id="header">
                 <div className="center">
-
                     <Logo/>
-
                     <nav id="menu">
                         <ul>
                             <li>
@@ -25,7 +20,7 @@ class Header extends Component {
                             </li>
     
                             <li>
-                                <Link to="/Home"> Home </Link>
+                                <Link to="/"> Home </Link>
                             </li>
 
                             <li>

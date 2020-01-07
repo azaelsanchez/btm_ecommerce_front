@@ -1,32 +1,19 @@
 import React, { Component, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 
 //Componentes importados
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import UserProfileData from '../components/UserProfileData';
-import UserProfileOrders from '../components/UserProfileOrders';
 
-class Perfil extends Component{
+class Profile extends Component{
 
     render(){
         return(
             <Fragment>
             <Header />
-            <div>
-                <p>Perfil Usuario</p>
-                <p>Datos Usuario</p>
-                <UserProfileData/>
-                <p>Datos pedidos</p>
-                <UserProfileOrders/> 
-            </div>
-            
-            <div>
-                <p>Perfil Administrador</p>
-                <p>Datos Administrador</p>
-                
-            </div>
-            
-
+            <Link to="../UserProfile"> Usuario </Link>
+            <br/>
+            <Link to="../AdminProfile"> Administrador </Link>
             <Footer />
             </Fragment>
             
@@ -35,4 +22,4 @@ class Perfil extends Component{
 }
 
 
-export default Perfil;
+export default Profile;
