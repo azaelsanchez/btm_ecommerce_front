@@ -19,6 +19,7 @@ class Home extends Component{
           <Header />
           <Promo/>
           <ProductsPromoted/>
+          <ProductsMostSelled/>
           
 
           {/*<Sidebar />
