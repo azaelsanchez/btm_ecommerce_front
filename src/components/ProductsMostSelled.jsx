@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-
+import collar1 from '../assets/images/collar1.jpg'
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -41,7 +41,7 @@ export default class CustomArrows extends Component {
         <h2> Productos más vendidos </h2>
         <Slider {...settings}>
           <div>
-            <h3>1</h3>
+          <h3>1</h3>
           </div>
           <div>
             <h3>2</h3>
@@ -63,4 +63,3 @@ export default class CustomArrows extends Component {
     );
   }
 }
-

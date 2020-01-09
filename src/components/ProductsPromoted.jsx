@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
+import collar1 from '../assets/images/collar1.jpg'
+import collar2 from '../assets/images/collar2.jpg'
+import collar3 from '../assets/images/collar3.jpg'
+import collar4 from '../assets/images/collar4.jpg'
 
 
 function SampleNextArrow(props) {
@@ -41,26 +45,21 @@ export default class CustomArrows extends Component {
         <h2> Productos destacados </h2>
         <Slider {...settings}>
           <div>
-            <h3>1</h3>
+          <img src={collar1} width="500px" height="500px" className="app-collar" alt="Collar1" />
           </div>
           <div>
-            <h3>2</h3>
+          <img src={collar2} width="500px" height="500px" className="app-collar" alt="Collar2" />
           </div>
           <div>
-            <h3>3</h3>
+          <img src={collar3} width="500px" height="500px" className="app-collar" alt="Collar3" />
           </div>
           <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
+          <img src={collar4} width="575px" height="575px" className="app-collar" alt="Collar4" />
           </div>
         </Slider>
       </div>
     );
   }
 }
+
 

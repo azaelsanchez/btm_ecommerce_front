@@ -19,7 +19,7 @@ class Home extends Component{
           <Header />
           <Promo/>
           <ProductsPromoted/>
-          <ProductsMostSelled/>
+          
 
           {/*<Sidebar />
           <div className="clearfix"></div>*/}
