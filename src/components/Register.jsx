@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Axios from 'axios';
+import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 
 
 class Register extends Component {
@@ -7,21 +8,23 @@ class Register extends Component {
     constructor(props){
         super(props);
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        //this.handleChange = this.handleChange.bind(this);
+       // this.handleSubmit = this.handleSubmit.bind(this);
 
         this.state = {
-          nombre: '',
+          name: '',
           surname1: '',
           surname2: '',
           password: '',
           email: '',
-          address1: '',
-          adress2: '',
+          shippAddress1: '',
+          shippAddress2: '',
           postalCode: '',
           city: '',
           RegionId: '',
           phone: '',
+
+          redirect: false
         }
     }
 
@@ -29,39 +32,50 @@ class Register extends Component {
       const target = event.target;
       const value = target.value;
       const name = target.name;
-
+      
       this.setState({
           [name]: value
       });
-
     }
 
     handleSubmit = (event) => {
       event.preventDefault();
 
       const body = {
-        nombre: this.state.nombre,
+        name: this.state.name,
         surname1: this.state.surname1,
         surname2: this.state.surname2,
         password: this.state.password,
         email: this.state.email,
-        address1: this.state.address1,
-        address2: this.state.address2,
+        shipAddress1: this.state.shipAddress1,
+        shipAddress2: this.state.shipAddress2,
         postalCode: this.state.postalCode,
         city: this.state.city,
         RegionId: this.state.RegionId,
         phone: this.state.phone,
       }
+      console.log('name',body.name, body.surname1,body.surname2, body.password,body.email);
+
+      axios.post('http://localhost:3001/user/register', body)
+      .then(item => console.log('usuario registrado'))
+      .then(item => this.setState({ redirect: true }))
+      .catch(err => console.error(err.error))
+
 
       //axios.post('http://localhost:3000/user/register', body)
-      //    .then( data =h> (data.id) )
+      //    .then( data => (data.id) )
       //    .catch( err => (err.mns))
 
-      Axios.get(`http://localhost:3000/user/region/${this.state.Region}`).then(num => this.setState({RegionId: num.data.id}))
-      .then( Axios.post('http://localhost:3000/user/register', body).then(item => console.log('usuario registrado'))
-      .catch(err => console.error(err)))
+      //Axios.get(`http://localhost:3000/user/region/${this.state.Region}`).then(num => this.setState({RegionId: num.data.id}))
+      //.then( Axios.post('http://localhost:3000/user/register', body).then(item => console.log('usuario registrado'))
+      //.catch(err => console.error(err)))
   }
 
+  renderRedirect = () => {
+    if (this.state.redirect) {
+        return <Redirect to='/login' />
+    }
+}
 
     render(){
         return(
@@ -70,7 +84,7 @@ class Register extends Component {
                 <label> Nombre </label>
                 <input
                     type="text"
-                    name="nombre"
+                    name="name"
                     value={this.state.nombre}
                     onChange={(ev) => this.handleChange(ev)}
                 />
@@ -111,16 +125,16 @@ class Register extends Component {
                 <label> Dirección 1 </label>
                   <input
                     type="text"
-                    name="address1"
-                    value={this.state.address1}
+                    name="shipAddress1"
+                    value={this.state.shipAddress}
                     onChange={(ev) => this.handleChange(ev)}
                   />
                 
                 <label> Dirección 2 </label>
                   <input
                     type="text"
-                    name="address2"
-                    value={this.state.address2}
+                    name="shipAddress2"
+                    value={this.state.shipAddress}
                     onChange={(ev) => this.handleChange(ev)}
                   />
 
@@ -160,7 +174,7 @@ class Register extends Component {
                   />
                 
                   
-                    <input type="submit" value="Create Account" />
+                    <button className="enviar" onSubmit={() => this.RegistrarUsuario()}>Enviar</button>
                 </form>
                 </div>
         )

@@ -62,10 +62,10 @@ module.exports = (sequelize, DataTypes) => {
             //     allowNull: false,
             //     validate: { notEmpty: true }
             // },
-            address1: {
+            shipAddress1: {
                 type: DataTypes.STRING(100),
             },
-            address2: {
+            shipAddress2: {
                 type: DataTypes.STRING(100),
             },
             createdAt: {
