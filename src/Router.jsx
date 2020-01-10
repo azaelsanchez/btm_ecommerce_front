@@ -25,7 +25,7 @@ function Router() {
                 <Route path="/orderDetail" exact component={OrderDetail} />
                 <Route path="/purchasingProcess" exact component={PurchasingProcess} />
                 <Route path="/profile" exact component={Profile} />  
-                <Route path="/Buscador" exact component={Buscador}/>
+                <Route path="/buscador" exact component={Buscador}/>
             </Switch>
         </BrowserRouter>
     )

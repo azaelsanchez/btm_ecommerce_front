@@ -44,13 +44,15 @@ class Search extends Component {
         console.log()
         return (
             <div>
-                {this.state.product.map(item => 
+             {this.state.product 
+              ? <div>{this.state.product.map(item => 
                     <div className="producto">
                    <img src={item.img1} alt="Imagen" />
                    <p>Nombre: {item.name}</p>
                    <p>Precio: {item.price}</p>
                    <p>Descripcion: {item.shortDesc}</p>
-                    </div>)}
+                    </div>
+                    )}</div>: <h1>No hay resultado</h1>  }   
          </div>
         )
     }

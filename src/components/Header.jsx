@@ -30,8 +30,8 @@ class Header extends Component {
                     <nav id="menu">
                         <ul>
                             <li>
-                            <input className="busqueda" type="text" onChange={(ev) => this.input(ev)} />
-                               <button>buscar</button>
+                            <input className="buscador" type="text" onChange={(ev) => this.input(ev)} />
+                            <Link to={'/buscador'}>  <button>buscar</button> </Link>
                             </li>
     
                             <li>
