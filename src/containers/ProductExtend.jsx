@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
 import Axios from 'axios';
-import Search from '../components/Search';
+import ProductsRelated from '../components/ProductsRelated';
+import Footer from '../components/Footer';
 class Busqueda extends Component {
     constructor(){
         super()
@@ -60,7 +61,9 @@ class Busqueda extends Component {
                 <li>{ product.longDesc }</li>
                 <li>Dimensiones: { product.dimensions }</li>
                 <button>Añadir al carrito</button>
-            
+                <ProductsRelated/>
+                <br/><br/>
+                <Footer/>            
        
         </div>
         
