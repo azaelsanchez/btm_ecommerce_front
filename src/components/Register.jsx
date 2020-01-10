@@ -18,7 +18,7 @@ class Register extends Component {
           password: '',
           email: '',
           shippAddress1: '',
-          shippAddress2: '',
+          //shippAddress2: '',
           postalCode: '',
           city: '',
           RegionId: '',
@@ -48,7 +48,7 @@ class Register extends Component {
         password: this.state.password,
         email: this.state.email,
         shipAddress1: this.state.shipAddress1,
-        shipAddress2: this.state.shipAddress2,
+        //shipAddress2: this.state.shipAddress2,
         postalCode: this.state.postalCode,
         city: this.state.city,
         RegionId: this.state.RegionId,
@@ -73,7 +73,7 @@ class Register extends Component {
 
   renderRedirect = () => {
     if (this.state.redirect) {
-        return <Redirect to='/login' />
+        return <Redirect to='/login'/>
     }
 }
 
@@ -85,7 +85,7 @@ class Register extends Component {
                 <input
                     type="text"
                     name="name"
-                    value={this.state.nombre}
+                    value={this.state.name}
                     onChange={(ev) => this.handleChange(ev)}
                 />
                 
@@ -130,13 +130,13 @@ class Register extends Component {
                     onChange={(ev) => this.handleChange(ev)}
                   />
                 
-                <label> Dirección 2 </label>
+                {/*<label> Dirección 2 </label>
                   <input
                     type="text"
                     name="shipAddress2"
-                    value={this.state.shipAddress}
+                    value={this.state.shipAddress2}
                     onChange={(ev) => this.handleChange(ev)}
-                  />
+                />*/}
 
                 <label> PostalCode </label>
                   <input

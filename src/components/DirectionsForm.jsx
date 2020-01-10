@@ -31,14 +31,6 @@ class DirectionsForm extends Component {
                     onChange={(ev) => this.handleChange(ev)}
                 />
 
-                <label> Dirección 1 </label>
-                <input
-                    type="text"
-                    name="shipAddress1"
-                    value={(this.state.shipAddress1)}
-                    onChange={(ev) => this.handleChange(ev)}
-                />
-
                 <label> Dirección 2 </label>
                 <input
                     type="text"
