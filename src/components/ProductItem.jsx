@@ -17,10 +17,11 @@ class ProductItem extends Component {
       })
   }
 
-  azael(nombre){
-    localStorage.setItem('nombre', nombre)
-    
-  }
+  detalles = (nombre) => {
+    console.log('Pepe')
+let product = localStorage.setItem('nombre', nombre);
+    // axios.get(`http://localhost:3001/search/product/${product}`).then(item => this.setState({product: item.data})).catch(err => console.error('LLegue hasta aqui'))
+}
   render() {
     return (
         <div>
@@ -30,7 +31,8 @@ class ProductItem extends Component {
             <li><h2>{product.name}</h2></li>
             <li>Precio: {product.price} €</li>
             <img src={product.img1}alt="Imagen producto"/>
-            <Link to={'/ProductDetail'}> <button onClick={() => this.azael(product.name)}>Más</button></Link>
+            <br/>
+            <Link to={'/extender'}> <button onClick={() => this.detalles(product.name)}>Más información</button></Link>
         </ul>
         </div>
         
