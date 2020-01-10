@@ -51,6 +51,7 @@ class Search extends Component {
                    <p>Nombre: {item.name}</p>
                    <p>Precio: {item.price}</p>
                    <p>Descripcion: {item.shortDesc}</p>
+                   <button onClick={() =>  this.carrito(item.id)}>Añadir al carrito</button>
                     </div>
                     )}</div>: <h1>No hay resultado</h1>  }   
          </div>

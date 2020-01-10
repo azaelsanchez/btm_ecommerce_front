@@ -48,10 +48,10 @@ export default class CustomArrows extends Component {
           <img src={collar6} width="500px" height="500px" className="app-collar" alt="Collar6" />
           </div>
           <div>
-          <img src={collar2} width="500px" height="500px" className="app-collar" alt="Collar2" />
+          <img src={collar5} width="500px" height="500px" className="app-collar" alt="Collar5" />
           </div>
           <div>
-          <img src={collar5} width="500px" height="500px" className="app-collar" alt="Collar5" />
+          <img src={collar2} width="500px" height="500px" className="app-collar" alt="Collar2" />
           </div>
           <div>
           <img src={collar3} width="575px" height="575px" className="app-collar" alt="Collar3" />
