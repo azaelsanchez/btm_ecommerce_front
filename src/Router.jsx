@@ -9,6 +9,7 @@ import ProductDetail from './containers/ProductDetail';
 import OrderDetail from './containers/OrderDetail';
 import PurchasingProcess from './containers/PurchasingProcess';
 import Profile from './containers/Profile';
+import Buscador from './containers/Busqueda'
 
 
 
@@ -24,6 +25,7 @@ function Router() {
                 <Route path="/orderDetail" exact component={OrderDetail} />
                 <Route path="/purchasingProcess" exact component={PurchasingProcess} />
                 <Route path="/profile" exact component={Profile} />  
+                <Route path="/buscador" exact component={Buscador}/>
             </Switch>
         </BrowserRouter>
     )

@@ -7,6 +7,20 @@ import Logo from './Logo';
 import Search from './Search';
 class Header extends Component {
 
+    constructor(){
+        super()
+        this.state={
+            input:''
+        }
+    }
+    input(ev) {
+        console.log(ev.target.value)
+        localStorage.setItem('Prueba', ev.target.value)
+        console.log('Hola')
+    }
+
+
+    
     render() {
 
         return (
@@ -16,7 +30,8 @@ class Header extends Component {
                     <nav id="menu">
                         <ul>
                             <li>
-                                <Search/>
+                            <input className="buscador" type="text" onChange={(ev) => this.input(ev)} />
+                            <Link to={'/buscador'}>  <button>buscar</button> </Link>
                             </li>
     
                             <li>
