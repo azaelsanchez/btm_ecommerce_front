@@ -59,6 +59,7 @@ class Busqueda extends Component {
                 <li>Talla: { product.size }</li>
                 <li>{ product.longDesc }</li>
                 <li>Dimensiones: { product.dimensions }</li>
+                <button>Añadir al carrito</button>
             
        
         </div>
