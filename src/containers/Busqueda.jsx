@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from '../components/Header';
 import Axios from 'axios';
 import Search from '../components/Search';
+import Footer from '../components/Footer';
 class Busqueda extends Component {
     constructor(){
         super()
@@ -12,7 +13,7 @@ class Busqueda extends Component {
         }
     }
     productoTitulo = () => {
-        console.log('Pepe')
+        console.log('pepito')
    let product = localStorage.getItem('Prueba');
         Axios.get(`http://localhost:3001/productos/productos/${product}`).then(item => this.setState({product: item.data})).catch(err => console.error('LLegue hasta aqui'))
     }
@@ -30,13 +31,13 @@ class Busqueda extends Component {
 
 
     carrito(num){
-        console.log('Hola')
+        console.log('estamos aqui')
         localStorage.setItem(`num${num}`, num)
 
 }
 
     componentDidMount(){
-        console.log('busqueda')
+        console.log('buscando')
         this.productoTitulo()
     }
 
@@ -47,7 +48,9 @@ class Busqueda extends Component {
             <div>
                 <Header logout={this.logout.bind(this)} />
                 <Search/>  
-            </div>            
+            <br/><br/>
+            <Footer/>  
+            </div>   
         )
     }
 }

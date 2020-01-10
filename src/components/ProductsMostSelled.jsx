@@ -5,7 +5,6 @@ import collar2 from '../assets/images/collar2.jpg'
 import collar6 from '../assets/images/collar6.jpg'
 import collar3 from '../assets/images/collar3.jpg'
 import collar7 from '../assets/images/collar7.jpg'
-
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -54,10 +53,10 @@ export default class CustomArrows extends Component {
           <a href="http://localhost:3000/buscador"><img src={collar2} width="500px" height="500px" className="app-collar" alt="Collar2" /></a>
           </div>
           <div>
-          <a href="http://localhost:3000/buscador"><img src={collar3} width="575px" height="575px" className="app-collar" alt="Collar3" /></a>
+          <a href="http://localhost:3000/buscador"><img src={collar3} width="500px" height="500px" className="app-collar" alt="Collar3" /></a>
           </div>
           <div>
-          <a href="http://localhost:3000/buscador"><img src={collar7} width="575px" height="575px" className="app-collar" alt="Collar7" /></a>
+          <a href="http://localhost:3000/buscador"><img src={collar7} width="500px" height="500px" className="app-collar" alt="Collar7" /></a>
           </div>
         </Slider>
       </div>

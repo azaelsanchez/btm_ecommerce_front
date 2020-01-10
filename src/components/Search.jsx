@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
+import ProductsRelated from '../components/ProductsRelated';
 // import './style/Buscador.css'
 class Search extends Component {
     constructor(props){
@@ -35,7 +36,6 @@ class Search extends Component {
 }
 
     componentDidMount(){
-        console.log('busqueda')
         this.productoTitulo()
     }
 
@@ -47,14 +47,18 @@ class Search extends Component {
              {this.state.product 
               ? <div>{this.state.product.map(item => 
                     <div className="producto">
+                   <h4>Nombre: {item.name}</h4>
                    <img src={item.img1} alt="Imagen" />
-                   <p>Nombre: {item.name}</p>
+                   <img src={item.img2 } alt="Imagen producto1"/>
+                   <img src={item.thumbImg3 } alt="Imagen producto1"/>
                    <p>Precio: {item.price}</p>
                    <p>Descripcion: {item.shortDesc}</p>
                    <button onClick={() =>  this.carrito(item.id)}>Añadir al carrito</button>
+                   <ProductsRelated/>
                     </div>
-                    )}</div>: <h1>No hay resultado</h1>  }   
+                    )}</div>: <h1>Producto no encontrado</h1> }   
          </div>
+         
         )
     }
 }

@@ -48,8 +48,7 @@ class Busqueda extends Component {
             <div>
                 <Header logout={this.logout.bind(this)} />
                 { this.state.product.map(product => 
-        <div>
-        
+            <div className="producto">
         <h4>{ product.name }</h4>
                 <img src={product.img1 } alt="Imagen producto1"/>
                 <img src={product.img2 } alt="Imagen producto1"/>
@@ -60,7 +59,7 @@ class Busqueda extends Component {
                 <li>Talla: { product.size }</li>
                 <li>{ product.longDesc }</li>
                 <li>Dimensiones: { product.dimensions }</li>
-                <button>Añadir al carrito</button>
+                <button onClick={() =>  this.carrito(product.id)}>Añadir al carrito</button>
                 <ProductsRelated/>
                 <br/><br/>
                 <Footer/>            
