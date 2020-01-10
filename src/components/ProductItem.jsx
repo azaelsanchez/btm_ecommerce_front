@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 import AddToCart from './AddToCart'
 
@@ -16,15 +17,24 @@ class ProductItem extends Component {
       })
   }
 
+  detalles = (nombre) => {
+    console.log('Pepe')
+let product = localStorage.setItem('nombre', nombre);
+    // axios.get(`http://localhost:3001/search/product/${product}`).then(item => this.setState({product: item.data})).catch(err => console.error('LLegue hasta aqui'))
+}
   render() {
     return (
         <div>
         { this.state.Products.map(product => 
+        <div>
         <ul>
-            <li>{product.name}</li>
+            <li><h2>{product.name}</h2></li>
+            <li>Precio: {product.price} €</li>
             <img src={product.img1}alt="Imagen producto"/>
-            <li>{product.price} €</li>
+            <br/>
+            <Link to={'/extender'}> <button onClick={() => this.detalles(product.name)}>Más información</button></Link>
         </ul>
+        </div>
         
             )}
             <AddToCart/>
