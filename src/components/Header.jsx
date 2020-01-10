@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 //import { MDBBreadcrumb, MDBBreadcrumbItem, MDBContainer } from "mdbreact";
 
 import Logo from './Logo';
-import Search from './Search';
 class Header extends Component {
 
     constructor(){
