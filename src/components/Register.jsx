@@ -52,7 +52,7 @@ class Register extends Component {
         postalCode: this.state.postalCode,
         city: this.state.city,
         RegionId: this.state.RegionId,
-        phone: this.state.phone,
+        phone: this.state.phone
       }
       console.log('name',body.name, body.surname1,body.surname2, body.password,body.email);
 
@@ -174,10 +174,11 @@ class Register extends Component {
                   />
                 
                   
-                    <button className="enviar" onSubmit={() => this.RegistrarUsuario()}>Enviar</button>
+                    <button className="enviar" onSubmit={() => this.RegistrarUsuario()}>Registrarse</button>
                 </form>
                 </div>
         )
+        
     }
 }
 export default Register;

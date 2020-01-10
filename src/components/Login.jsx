@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-
+import { Redirect } from 'react-router-dom';
 
 class Login extends Component {
 
     constructor(props){
         super(props);
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        //this.handleChange = this.handleChange.bind(this);
+        //this.handleSubmit = this.handleSubmit.bind(this);
 
         this.state = {
             email: '',
-            password: ''
+            password: '',
 
+            redirect: false
         }
     }
 
@@ -36,9 +37,10 @@ class Login extends Component {
         password: this.state.password,
       }
 
-      axios.post('http://localhost:3000/user/login', body)
-          .then( data => (data.id) )
-          .catch( err => (err.mns))
+      axios.post('http://localhost:3001/user/login', body)
+        .then(item => console.log('usuario logueado'))
+        .then(item => this.setState({ redirect: true }))
+        .catch(err => console.error(err.error))
 
     
     
