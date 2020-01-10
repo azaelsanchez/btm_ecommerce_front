@@ -45,19 +45,19 @@ export default class CustomArrows extends Component {
         <h2> Productos más vendidos </h2>
         <Slider {...settings}>
         <div>
-          <img src={collar6} width="500px" height="500px" className="app-collar" alt="Collar6" />
+        <a href="http://localhost:3000/buscador"><img src={collar6} width="500px" height="500px" className="app-collar" alt="Collar6" /></a>
           </div>
           <div>
-          <img src={collar5} width="500px" height="500px" className="app-collar" alt="Collar5" />
+          <a href="http://localhost:3000/buscador"><img src={collar5} width="500px" height="500px" className="app-collar" alt="Collar5" /></a>
           </div>
           <div>
-          <img src={collar2} width="500px" height="500px" className="app-collar" alt="Collar2" />
+          <a href="http://localhost:3000/buscador"><img src={collar2} width="500px" height="500px" className="app-collar" alt="Collar2" /></a>
           </div>
           <div>
-          <img src={collar3} width="575px" height="575px" className="app-collar" alt="Collar3" />
+          <a href="http://localhost:3000/buscador"><img src={collar3} width="575px" height="575px" className="app-collar" alt="Collar3" /></a>
           </div>
           <div>
-          <img src={collar7} width="575px" height="575px" className="app-collar" alt="Collar7" />
+          <a href="http://localhost:3000/buscador"><img src={collar7} width="575px" height="575px" className="app-collar" alt="Collar7" /></a>
           </div>
         </Slider>
       </div>
