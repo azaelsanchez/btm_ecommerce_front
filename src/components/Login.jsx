@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios'
+import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 
 
 class Login extends Component {
@@ -35,13 +36,19 @@ class Login extends Component {
         email: this.state.email,
         password: this.state.password,
       }
-
-      axios.post('http://localhost:3000/user/login', body)
-          .then( data => (data.id) )
-          .catch( err => (err.mns))
-
+console.log("Hola")
+        axios.post('http://localhost:3001/user/login', body)
+        .then(item => {localStorage.setItem('user', JSON.stringify(item.data.user))})
+        .then(item => {this.setState({user:JSON.parse(localStorage.getItem('user'))})})
+        .then(item => this.setState({redirect: true}))
+        .catch(error => console.error(error))
     
-    
+  }
+
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return <Redirect to='/' />
+    }
   }
 
   handleReset = (event) => {
@@ -72,9 +79,11 @@ class Login extends Component {
                         onChange={(ev) => this.handleChange(ev)}
                         />
                     <button onClick={(ev) => this.handleReset(ev)}> Reset </button>
-                    <input type="submit" value="Login" />
+                    <button className="enviar" onSubmit={() => this.LoginUsuario()}>LogIn</button>
                 </form>
+                {this.renderRedirect()}
         </div>
+         
         )
     }
 }

@@ -24,8 +24,8 @@ comprar(){
     const body =[{
         'total':this.state.producto[0].precio,
         'cantidad' : 1,
-        'usuario_id' : JSON.parse(localStorage.getItem('usuario')).id,
-        'producto_id' : this.state.producto[0].id
+        'user_id' : JSON.parse(localStorage.getItem('user')).id,
+        'product_id' : this.state.producto[0].id
     }]
     Axios.post('http://localhost:3001/search/order/', body).then(item =>console.log( item)).catch(error => console.error('Algo fallo'))
     console.log(body)
@@ -67,7 +67,7 @@ comprar(){
                     <p className="nom">{product.name}</p>
                     <p className="nom">Cantidad: 1</p>
                     <p className="precio2"> {product.price} €</p>
-                    {!localStorage.getItem('usuario') ? <button className="confirmar" disabled> Confirmar</button> : <button onClick={() => this.comprar()}>Confirmar</button> }
+                    {!localStorage.getItem('user') ? <button className="confirmar" disabled> Confirmar</button> : <button onClick={() => this.comprar()}>Confirmar</button> }
                 </div>
                 )} 
                 {/* {this.state.usuario.nombre} */}
