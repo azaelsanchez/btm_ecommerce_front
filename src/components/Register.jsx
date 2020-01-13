@@ -7,20 +7,20 @@ class Register extends Component {
     constructor(props){
         super(props);
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        //this.handleChange = this.handleChange.bind(this);
+        // this.handleSubmit = this.handleSubmit.bind(this);
 
         this.state = {
-          nombre: '',
+          name: '',
           surname1: '',
           surname2: '',
           password: '',
           email: '',
-          address1: '',
-          adress2: '',
+          shipAddress1: '',
+          shipAddress2: '',
           postalCode: '',
           city: '',
-          RegionId: '',
+          //RegionId: '',
           phone: '',
         }
     }
@@ -40,16 +40,16 @@ class Register extends Component {
       event.preventDefault();
 
       const body = {
-        nombre: this.state.nombre,
+        name: this.state.name,
         surname1: this.state.surname1,
         surname2: this.state.surname2,
         password: this.state.password,
         email: this.state.email,
-        address1: this.state.address1,
-        address2: this.state.address2,
+        shipAddress1: this.state.shipAddress1,
+        shipAddress2: this.state.shipAddress2,
         postalCode: this.state.postalCode,
         city: this.state.city,
-        RegionId: this.state.RegionId,
+        //RegionId: this.state.RegionId,
         phone: this.state.phone,
       }
 
@@ -57,9 +57,10 @@ class Register extends Component {
       //    .then( data =h> (data.id) )
       //    .catch( err => (err.mns))
 
-      Axios.get(`http://localhost:3000/user/region/${this.state.Region}`).then(num => this.setState({RegionId: num.data.id}))
-      .then( Axios.post('http://localhost:3000/user/register', body).then(item => console.log('usuario registrado'))
-      .catch(err => console.error(err)))
+      Axios.post('http://localhost:3001/user/register', body)
+                .then(item => console.log('usuario registrado'))
+                .then(item => this.setState({ redirect: true }))
+                .catch(err => console.error(err.error))
   }
 
 
@@ -70,8 +71,8 @@ class Register extends Component {
                 <label> Nombre </label>
                 <input
                     type="text"
-                    name="nombre"
-                    value={this.state.nombre}
+                    name="name"
+                    value={this.state.name}
                     onChange={(ev) => this.handleChange(ev)}
                 />
                 
@@ -111,16 +112,16 @@ class Register extends Component {
                 <label> Dirección 1 </label>
                   <input
                     type="text"
-                    name="address1"
-                    value={this.state.address1}
+                    name="shipAddress1"
+                    value={this.state.shipAddress1}
                     onChange={(ev) => this.handleChange(ev)}
                   />
                 
                 <label> Dirección 2 </label>
                   <input
                     type="text"
-                    name="address2"
-                    value={this.state.address2}
+                    name="shipAddress2"
+                    value={this.state.shipAddress2}
                     onChange={(ev) => this.handleChange(ev)}
                   />
 
@@ -142,13 +143,13 @@ class Register extends Component {
                   />
 
 
-                <label> RegionId </label>
+                {/* <label> RegionId </label>
                   <input
                     type="text"
                     name="RegionId"
                     value={this.state.RegionId}
                     onChange={(ev) => this.handleChange(ev)}
-                  />
+                  /> */}
                 
 
                 <label> Phone </label>
