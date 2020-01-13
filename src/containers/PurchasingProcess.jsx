@@ -21,13 +21,14 @@ class PurchasingProcess extends Component {
 
 comprar(){
     console.log('Comprar')
+    console.log(this.state.producto )
     const body =[{
-        'total':this.state.producto[0].precio,
+        'total':this.state.producto[0].price,
         'cantidad' : 1,
         'user_id' : JSON.parse(localStorage.getItem('user')).id,
         'product_id' : this.state.producto[0].id
     }]
-    Axios.post('http://localhost:3001/search/order/', body).then(item =>console.log( item)).catch(error => console.error('Algo fallo'))
+    Axios.post('http://localhost:3001/search/order', body).then(item =>console.log( item)).catch(error => console.error('Algo fallo'))
     console.log(body)
 }
 
