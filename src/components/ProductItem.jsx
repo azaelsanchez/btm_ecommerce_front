@@ -15,6 +15,7 @@ class ProductItem extends Component {
         const Products = res.data;
         this.setState({ Products });
       })
+
   }
 
   detalles = (nombre) => {
@@ -23,6 +24,15 @@ let product = localStorage.setItem('nombre', nombre);
     // axios.get(`http://localhost:3001/search/product/${product}`).then(item => this.setState({product: item.data})).catch(err => console.error('LLegue hasta aqui'))
 }
   render() {
+   if(this.state.Products){
+     console.log('adios');
+     
+     localStorage.setItem('logintudProducto', this.state.Products.length)
+   } else{
+    console.log('hola');
+     
+    console.log(this.state.Products)
+   }
     return (
         <div>
         { this.state.Products.map(product => 

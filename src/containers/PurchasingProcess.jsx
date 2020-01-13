@@ -1,30 +1,81 @@
 import React, { Component, Fragment } from 'react';
-
-//Componentes importados
+import Axios from 'axios';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import OrderDetailToMake from '../components/OrderDetailToMake';
-//import DirectionForm from '../components/DirectionsForm'
-import Button from '../components/Button';
-import { Link } from 'react-router-dom';
+class PurchasingProcess extends Component {
 
-class PurchasingProcess extends Component{
+    constructor(props) {
+        super(props);
 
-    render(){
-        return(
-            <Fragment>
-                <Header />
-                <h3>Detalles del pedido</h3>
-                <OrderDetailToMake/>
-                <h3>Dirección del pedido</h3>
-                {/*<DirectionForm/>*/}
-                <p>TOTAL:</p>
-                <p>Comprar</p>
-                <Button/>
-                <Link to={'/OrderDetail'}> Detalle Pedido</Link>
-                <Footer />
-            </Fragment>
-        )
+        this.state = {
+            usuario: JSON.parse(localStorage.getItem('usuario')),
+            producto: [],
+          
+            
+        }
+    }
+
+    carrito(num){
+        localStorage.setItem(`num${num}`, num)
+}
+
+comprar(){
+    console.log('Comprar')
+    const body =[{
+        'total':this.state.producto[0].precio,
+        'cantidad' : 1,
+        'usuario_id' : JSON.parse(localStorage.getItem('usuario')).id,
+        'producto_id' : this.state.producto[0].id
+    }]
+    Axios.post('http://localhost:3001/search/order/', body).then(item =>console.log( item)).catch(error => console.error('Algo fallo'))
+    console.log(body)
+}
+
+
+    obtenerProductos = (num) => {
+        console.log('numero', num)
+    Axios.get(`http://localhost:3001/products/product/${num}`).then(product =>this.setState({producto:[product.data]})).catch(err => console.error(err))
+    }
+
+
+    componentDidMount() {
+        console.log('hola')
+        for(let i = 0; i <= localStorage.getItem('logintudProducto');i++){
+            console.log(i)
+        if(localStorage.getItem(`num${i}`)){
+            this.obtenerProductos(localStorage.getItem(`num${i}`))
+            console.log('Entro', localStorage.getItem(`num${i}`))
+        }
+            }
+           
+        }
+     
+    
+
+
+    render() {
+        console.log('soy el render')
+
+    return (
+        <Fragment>
+          <Header />
+        <div>
+            
+            {this.state.producto.map(product => 
+                <div className="productoCarrito">
+                    <img src={product.img1} alt="Imagen"/>
+                    <p className="nom">{product.name}</p>
+                    <p className="nom">Cantidad: 1</p>
+                    <p className="precio2"> {product.price} €</p>
+                    {!localStorage.getItem('usuario') ? <button className="confirmar" disabled> Confirmar</button> : <button onClick={() => this.comprar()}>Confirmar</button> }
+                </div>
+                )} 
+                {/* {this.state.usuario.nombre} */}
+           
+        </div>
+        <Footer/>
+    </Fragment>
+    )
     }
 }
 
