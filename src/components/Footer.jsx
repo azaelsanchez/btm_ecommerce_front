@@ -7,10 +7,7 @@ const Footer = () => {
                 <p>
                     &copy; Ecommerce BTM 
                 </p>
-                <p>sitemap</p>
-                <p>logo mini</p>
-                <p>listado de productos</p>
-                <p>pedidos</p>
+                
             </div>
         </footer>
     );
