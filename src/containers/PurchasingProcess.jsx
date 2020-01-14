@@ -19,6 +19,11 @@ class PurchasingProcess extends Component {
         localStorage.setItem(`num${num}`, num)
 }
 
+borrar (num){
+    localStorage.removeItem(`num${num}`);
+}
+
+
 comprar(){
     console.log('Comprar')
     console.log(this.state.producto )
@@ -69,6 +74,7 @@ comprar(){
                     <p className="nom">Cantidad: 1</p>
                     <p className="precio2"> {product.price} €</p>
                     {!localStorage.getItem('user') ? <button className="confirmar" disabled> Confirmar</button> : <button onClick={() => this.comprar()}>Confirmar</button> }
+                    {!localStorage.getItem('user') ? <button className="borrar" disabled> Borrar</button> : <button onClick={() => this.borrar(product.id)}>Borrar</button> }
                 </div>
                 )} 
                 {/* {this.state.usuario.nombre} */}
