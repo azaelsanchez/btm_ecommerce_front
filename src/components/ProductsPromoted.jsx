@@ -35,7 +35,7 @@ export default class CustomArrows extends Component {
       infinite: true,
       centerPadding: "60px",
       centerMode: true,
-      slidesToShow: 3,
+      slidesToShow: 2,
       slidesToScroll: 1,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />
@@ -54,7 +54,7 @@ export default class CustomArrows extends Component {
           <a href="http://localhost:3000/buscador"><img src={collar3} width="500px" height="500px" className="app-collar" alt="Collar3" /></a>
           </div>
           <div>
-          <a href="http://localhost:3000/buscador"><img src={collar4} width="575px" height="575px" className="app-collar" alt="Collar4" /></a>
+          <a href="http://localhost:3000/buscador"><img src={collar4} width="500px" height="500px" className="app-collar" alt="Collar4" /></a>
           </div>
         </Slider>
       </div>

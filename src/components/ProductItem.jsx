@@ -40,7 +40,7 @@ let product = localStorage.setItem('nombre', nombre);
         <ul>
             <li><h2>{product.name}</h2></li>
             <li>Precio: {product.price} €</li>
-            <img src={product.img1}alt="Imagen producto"/>
+            <Link to={'/extender'}><img onClick={() => this.detalles(product.name)} src={product.img1}alt="Imagen producto"/></Link>
             <br/>
             <Link to={'/extender'}> <button onClick={() => this.detalles(product.name)}>Más información</button></Link>
         </ul>
