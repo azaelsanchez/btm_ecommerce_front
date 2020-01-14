@@ -25,7 +25,7 @@ borrar (num){
 
 
 comprar(){
-    console.log('Comprar')
+    alert("Producto comprado con exito");
     console.log(this.state.producto )
     const body =[{
         'total':this.state.producto[0].price,
