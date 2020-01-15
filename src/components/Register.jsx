@@ -58,7 +58,7 @@ class Register extends Component {
       //    .catch( err => (err.mns))
 
       Axios.post('http://localhost:3001/user/register', body)
-                .then(item => console.log('usuario registrado'))
+                .then(item => alert('Usuario registrado'))
                 .then(item => this.setState({ redirect: true }))
                 .catch(err => console.error(err.error))
   }
