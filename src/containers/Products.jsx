@@ -22,7 +22,7 @@ class Products extends Component{
                 </nav>
             </div>
         
-            <Footer />
+            {/* <Footer /> */}
             </Fragment>
             
         )

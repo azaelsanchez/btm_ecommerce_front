@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
 import Axios from 'axios';
-import Search from '../components/Search';
+import Extend from '../containers/ProductExtend';
 import Footer from '../components/Footer';
 class Busqueda extends Component {
     constructor(){
@@ -45,12 +45,9 @@ class Busqueda extends Component {
     render() {
         console.log()
         return (
-            <div>
-                <Header logout={this.logout.bind(this)} />
-                <Search/>  
-            <br/><br/>
-            <Footer/>  
-            </div>   
+            
+                <Extend/>  
+            
         )
     }
 }

@@ -714,7 +714,7 @@ hr {
 }
 
 .read_more:hover {
-     background: #8308eb;
+     /* background: #8308eb; */
      color: #fff;
 }
 
@@ -787,7 +787,7 @@ hr {
 }
 
 .bg:hover {
-     background: #8308eb;
+     /* background: #8308eb; */
      color: #fff;
 }
 
@@ -844,7 +844,7 @@ hr {
 }
 
 .contact .main_form .send:hover {
-     background-color: #8308eb;
+     /* background-color: #8308eb; */
      transition: ease-in all 0.5s;
      color: #fff;
 }
