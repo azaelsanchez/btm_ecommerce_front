@@ -11,6 +11,7 @@ import PurchasingProcess from './containers/PurchasingProcess';
 import Profile from './containers/Profile';
 import Buscador from './containers/Busqueda'
 import Extender from './containers/ProductExtend'
+import Footer from './components/Footer'
 
 
 
@@ -29,6 +30,7 @@ function Router() {
                 <Route path="/buscador" exact component={Buscador}/>
                 <Route path="/extender" exact component={Extender}/>
             </Switch>
+            <Footer/>
         </BrowserRouter>
     )
 }

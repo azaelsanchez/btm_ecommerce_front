@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
+
 
 //import { MDBBreadcrumb, MDBBreadcrumbItem, MDBContainer } from "mdbreact";
 
@@ -23,41 +24,48 @@ class Header extends Component {
     render() {
 
         return (
+                 // <!-- header inner -->
             <header id="header">
-                <div className="center">
-                    <Logo/>
-                    <nav id="menu">
-                        <ul>
-                            <li>
-                            <input className="buscador" type="text" onChange={(ev) => this.input(ev)} />
-                            <Link to={'/buscador'}>  <button>buscar</button> </Link>
-                            </li>
-    
-                            <li>
-                                <Link to="/"> Home </Link>
-                            </li>
-
-                            <li>
-                                <Link to="/Products"> Productos </Link>
-                            </li>
-
-                            {/* <li>
-                                <a href="#">Info</a>
-                            </li> */}
-
-                            <li>
-                                <Link to="/Login"> Mi perfil </Link>
-                            </li>
-                            
-                            <li>
-                                <Link to="/PurchasingProcess"> Cesta </Link>
-                            </li>
-                        </ul>
-                        
-                    </nav>
-
-                    <div className="clearfix"></div>
-            </div>    
+            <div className="header">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                            <div className="full">
+                                <div className="center-desk">
+                                    <div className="logo">
+                                             <Logo/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                            <nav className="navigation navbar navbar-expand-md navbar-dark ">
+                                <button className="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                    <span className="navbar-toggler-icon"></span>
+                                </button>
+                                <div className="collapse navbar-collapse" id="navbarsExample04">
+                                    <ul>
+                                        <li className="nav-item">
+                                            <div className="search-box">
+                                            <input className="search" placeholder="Busca productos" type="text" onChange={(ev) => this.input(ev)} />
+                                            <Link to={'/buscador'}><a className="nav-link search" href="#search"><img src="images/search-icon.svg" alt="#"></img></a></Link>
+                                            </div>
+                                        </li>
+                                        <li className="nav-item">
+                                        <Link to="/Login"> <a class="nav-link profile"><img src="images/profile-icon.svg" alt="#"></img></a></Link>
+                                        </li>
+                                        <li className="nav-item">
+                                        <Link to="/PurchasingProcess"><a className="nav-link" ><img src="images/cart-icon.svg" alt="carrito" /></a></Link>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
             </header>
             
         )

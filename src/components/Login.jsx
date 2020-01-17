@@ -78,8 +78,8 @@ console.log("Hola")
                         value={this.state.password}
                         onChange={(ev) => this.handleChange(ev)}
                         />
-                    <button onClick={(ev) => this.handleReset(ev)}> Reset </button>
-                    <button className="enviar" onSubmit={() => this.LoginUsuario()}>LogIn</button>
+                    <button className="remove-from-cart" onClick={(ev) => this.handleReset(ev)}> Reset </button>
+                    <button className="buy" onSubmit={() => this.LoginUsuario()}>Login</button>
                 </form>
                 {this.renderRedirect()}
         </div>
@@ -87,4 +87,6 @@ console.log("Hola")
         )
     }
 }
+
+
 export default Login;

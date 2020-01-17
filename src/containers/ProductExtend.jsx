@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from '../components/Header';
 import Axios from 'axios';
 import ProductsRelated from '../components/ProductsRelated';
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 class Busqueda extends Component {
     constructor(){
         super()
@@ -49,26 +49,62 @@ class Busqueda extends Component {
             <div>
                 <Header logout={this.logout.bind(this)} />
                 { this.state.product.map(product => 
-            <div className="producto">
-        <h4>{ product.name }</h4>
-                <img src={product.img1 } alt="Imagen producto1"/>
-                <img src={product.img2 } alt="Imagen producto1"/>
-                <img src={product.thumbImg3 } alt="Imagen producto1"/>
-                <li>{ product.shortDesc }</li>
-                <li>Precio: { product.price } €</li>
-                <li>Stock: { product.stock }</li>
-                <li>Talla: { product.size }</li>
-                <li>{ product.longDesc }</li>
-                <li>Dimensiones: { product.dimensions }</li>
-                <button onClick={() =>  this.carrito(product.id)}>Añadir al carrito</button>
+          <div id="service" className="Services detalle-producto-final">
+          <div className="container">
+             <div className="row">
+                <div className="col-md-12">
+                   <div className="titlepage">
+                      <h2>Detalle de producto</h2>
+                   </div>
+                </div>
+             </div>
+             <div className="row">
+                <div className="col-md-12">
+                   <div className="container-detail">
+                      <div className="row">
+                         <div className="col-md-6">
+                            <div className="Services-box">
+                               <img src={product.img1 } alt="#" />
+                            </div>
+                         </div>
+                         <div className="col-md-6">
+                            <div className="product-description">
+                               <p className="name">{ product.name }</p>
+                               <p className="price">23.95€ <span className="stock">(30 en stock)</span></p>
+                               <hr/>
+                               <p className="size">Talla: <span>M</span></p>
+                               <p className="dimensions">Dimensiones: 19 x 5 x 2 cm</p>
+                               <div className="container-buttons">
+                               <button className='buy' onClick={() =>  this.carrito(product.id)}>Añadir al carrito</button>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                      <div className="row">
+ }   <div className="col-md-6">
+                            <div className="Services-box neat-services">
+                               <img src={product.img2 } alt="#" />
+                            </div>
+                         </div>
+                         <div className="col-md-6">
+                            <p className="lorem">
+                            { product.shortDesc }
+                            </p>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div className='mover'>
                 <ProductsRelated/>
-                <br/><br/>
-                <Footer/>            
+                </div>
+                
        
         </div>
         
             )}
-            </div>            
+        </div>      
         )
     }
 }

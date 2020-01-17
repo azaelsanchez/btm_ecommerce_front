@@ -15,13 +15,13 @@ function Main() {
     <Fragment>
       <Header />
         <ProductsPromoted />
-        <br/><br/>
+        
         <ProductsMostSelled/>
 
         {/* <Sidebar /> */}
         <div className="clearfix"></div>
-        <br/><br/><br/><br/><br/><br/><br/><br/>
-      <Footer />
+      
+      {/* <Footer /> */}
     </Fragment>
   );
 }

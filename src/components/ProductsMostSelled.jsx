@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import Slider from "react-slick";
 import collar5 from '../assets/images/collar5.jpg'
 import collar2 from '../assets/images/collar2.jpg'
@@ -10,7 +11,7 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "gray" }}
+      style={{ ...style, display: "block", background: "green" }}
       onClick={onClick}
     />
   );
@@ -21,7 +22,7 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "gray" }}
+      style={{ ...style, display: "block", background: "green" }}
       onClick={onClick}
     />
   );
@@ -30,10 +31,9 @@ function SamplePrevArrow(props) {
 export default class CustomArrows extends Component {
   render() {
     const settings = {
-    
       infinite: true,
       centerPadding: "60px",
-      centerMode: true,
+
       slidesToShow: 2,
       slidesToScroll: 1,
       nextArrow: <SampleNextArrow />,
@@ -41,8 +41,12 @@ export default class CustomArrows extends Component {
     };
     return (
       <div>
+        <div className="row d_flex">
+          <div className="col-md-4 offset-md-2 productos-destacados">
         <h2> Productos más vendidos </h2>
+        <Link to="/Products" className="ver-mas">Ver más</Link>
         <Slider {...settings}>
+
         <div>
         <a href="http://localhost:3000/buscador"><img src={collar6} width="500px" height="500px" className="app-collar" alt="Collar6" /></a>
           </div>
@@ -59,6 +63,9 @@ export default class CustomArrows extends Component {
           <a href="http://localhost:3000/buscador"><img src={collar7} width="500px" height="500px" className="app-collar" alt="Collar7" /></a>
           </div>
         </Slider>
+
+      </div>
+      </div>
       </div>
     );
   }

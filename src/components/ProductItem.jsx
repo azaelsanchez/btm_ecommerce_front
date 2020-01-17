@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-import AddToCart from './AddToCart'
 
 class ProductItem extends Component {
   state = {
@@ -34,21 +33,38 @@ let product = localStorage.setItem('nombre', nombre);
     console.log(this.state.Products)
    }
     return (
-        <div>
-        { this.state.Products.map(product => 
-        <div>
-        <ul>
-            <li><h2>{product.name}</h2></li>
-            <li>Precio: {product.price} €</li>
-            <Link to={'/extender'}><img onClick={() => this.detalles(product.name)} src={product.img1}alt="Imagen producto"/></Link>
-            <br/>
-            <Link to={'/extender'}> <button onClick={() => this.detalles(product.name)}>Más información</button></Link>
-        </ul>
+      <Fragment>
+        <div className="titlepage">
+                    <h2>Catálogo de productos</h2>
         </div>
+        <div>
+      { this.state.Products.map(product => 
+        <div id="service" className="Services col-xl-4 col-lg-4 col-md-4 col-sm-12">
+        {/* <div> */}
+        {/* <div className="container"> */}
+           {/* <div className="row"> */}
+              {/* <div className="col-md-12"> */}
+                 
+                 {/* </div> */}
+              {/* </div> */}
+           {/* </div> */}
+          {/* //  <div className="row"> */}
+              <div className="">
+                 <div className="Services-box">
+                    <i><Link to={'/extender'}><img onClick={() => this.detalles(product.name)} src={product.img1}alt="Imagen producto"/></Link></i>
+                    <h3>{product.name}</h3>
+                    <p>{product.price} €</p>
+                    <Link to={'/extender'}> <a className="buy" onClick={() => this.detalles(product.name)}>Más información</a></Link>
+                 </div>
+              </div>
+                {/* //  </div> */}
+                {/* //  </div> */}
+        </div>
+                 
         
             )}
-            <AddToCart/>
         </div> 
+        </Fragment>
     )
   }
         

@@ -161,7 +161,7 @@ class Register extends Component {
                   />
                 
                   
-                    <input type="submit" value="Create Account" />
+                    <input className="buy"type="submit" value="Create Account" />
                 </form>
                 </div>
         )

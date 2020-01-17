@@ -23,7 +23,7 @@ class LoginPage extends Component{
                 <Login/>
                 
                 <Link to={'/Profile'}> Profile Admin/User</Link>
-                <Footer />
+                {/* <Footer /> */}
             </Fragment>
             
         )

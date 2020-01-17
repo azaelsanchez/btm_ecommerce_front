@@ -15,7 +15,7 @@ class DetailProduct extends Component{
                 <Header />
                 <ProductItemDetail/>
                 <ProductsRelated/>
-                <Footer />
+                {/* <Footer /> */}
             </Fragment>
             
         )

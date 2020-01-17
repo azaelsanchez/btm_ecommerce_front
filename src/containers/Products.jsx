@@ -18,8 +18,7 @@ class Products extends Component{
                 <nav>
                     <FilterPrice/>
                     <ProductItem/>
-                    
-                    <Link to={'/ProductDetail'}> DetalleProducto</Link>
+                
                 </nav>
             </div>
         
